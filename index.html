@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yasir Khan | Portfolio</title>
+    <title>Yasir Khan | Full-Stack Developer</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <style>
-        /* Base & Variables */
+<style>
+    /* Base & Variables */
 :root {
     --bg-main: #0a192f;
     --bg-secondary: #112240;
+    --bg-card: #1d3354;
     --text-main: #ccd6f6;
     --text-muted: #8892b0;
     --accent: #64ffda;
@@ -33,223 +34,127 @@ body {
     line-height: 1.6;
 }
 
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-.highlight {
-    color: var(--accent);
-}
+.container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.highlight { color: var(--accent); }
 
 /* Typography */
 h1, h2, h3 { color: var(--text-main); }
-.section-title {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
-    position: relative;
-}
-.section-title::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 3px;
-    background: var(--accent);
-    margin: 10px auto 0;
-}
+.section-title { font-size: 2.5rem; margin-bottom: 0.5rem; text-align: center; position: relative; }
+.section-subtitle { text-align: center; color: var(--text-muted); margin-bottom: 3rem; }
+.section-title::after { content: ''; display: block; width: 50px; height: 3px; background: var(--accent); margin: 15px auto 0; }
 
 /* Navigation */
-nav {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    background: rgba(10, 25, 47, 0.9);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-    padding: 1rem 0;
-    transition: all 0.3s ease;
-}
-.nav-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--accent);
-    text-decoration: none;
-}
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-}
-.nav-links a {
-    color: var(--text-main);
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: color 0.3s ease;
-}
-.nav-links a:hover {
-    color: var(--accent);
-}
+nav { position: fixed; width: 100%; top: 0; background: rgba(10, 25, 47, 0.9); backdrop-filter: blur(10px); z-index: 1000; padding: 1rem 0; transition: all 0.3s ease; }
+.nav-content { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.5rem; font-weight: bold; color: var(--accent); text-decoration: none; }
+.nav-links { list-style: none; display: flex; gap: 2rem; }
+.nav-links a { color: var(--text-main); text-decoration: none; font-size: 0.9rem; transition: color 0.3s ease; }
+.nav-links a:hover { color: var(--accent); }
 
-/* Sections */
-section {
-    padding: 100px 0;
-}
-
-/* Hero */
-.hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
+/* Hero & Stats */
+section { padding: 120px 0; }
+.hero { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; }
 .hero h1 { font-size: 4rem; margin-bottom: 1rem; }
 .hero h2 { font-size: 2rem; color: var(--text-muted); margin-bottom: 1.5rem; }
-.hero p { color: var(--text-muted); max-width: 500px; margin: 0 auto 2rem; }
+.hero p { color: var(--text-muted); max-width: 600px; margin: 0 auto 2rem; font-size: 1.1rem; }
+
+.stats-banner { display: flex; justify-content: center; gap: 4rem; margin-bottom: 3rem; background: var(--bg-secondary); padding: 2rem; border-radius: 12px; border: 1px solid rgba(100, 255, 218, 0.1); }
+.stat-item h3 { color: var(--accent); font-size: 2.5rem; margin-bottom: 0.2rem; }
+.stat-item p { color: var(--text-main); font-size: 0.9rem; margin: 0; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;}
 
 /* Buttons */
-.btn {
-    padding: 0.8rem 1.5rem;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    display: inline-block;
-}
-.btn.primary {
-    background: transparent;
-    color: var(--accent);
-    border: 1px solid var(--accent);
-}
-.btn.primary:hover {
-    background: rgba(100, 255, 218, 0.1);
-}
-.btn.secondary {
-    color: var(--text-main);
-}
+.btn { padding: 0.8rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: bold; transition: all 0.3s ease; display: inline-block; cursor: pointer;}
+.btn.primary { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+.btn.primary:hover { background: rgba(100, 255, 218, 0.1); transform: translateY(-2px); }
+.btn.secondary { color: var(--text-main); }
+.btn.secondary:hover { color: var(--accent); }
 .hero-btns { display: flex; gap: 1rem; justify-content: center; }
 
-/* About & Skills */
-.about-text { text-align: center; color: var(--text-muted); max-width: 800px; margin: 0 auto; font-size: 1.1rem; }
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1.5rem;
-    text-align: center;
-}
-.skill-card {
-    background: var(--bg-secondary);
-    padding: 2rem;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-.skill-card:hover { transform: translateY(-5px); }
-.skill-card i { font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem; }
-
-/* Projects */
+/* Project Grid */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
 }
 .project-card {
     background: var(--bg-secondary);
     border-radius: 8px;
     padding: 2rem;
-    transition: transform 0.3s ease;
-}
-.project-card:hover { transform: translateY(-5px); }
-.project-info h3 { color: var(--text-main); margin-bottom: 1rem; }
-.project-info p { color: var(--text-muted); margin-bottom: 1.5rem; }
-.tech-stack { display: flex; gap: 0.5rem; flex-wrap: wrap; }
-.tech-stack span {
-    font-size: 0.8rem;
-    color: var(--accent);
-    font-family: monospace;
-}
-
-/* Contact Form */
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
+    transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    height: 100%;
 }
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 1rem;
-    background: var(--bg-secondary);
-    border: 1px solid transparent;
-    color: var(--text-main);
-    border-radius: 4px;
-    font-family: inherit;
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
 }
-.contact-form input:focus, .contact-form textarea:focus {
-    outline: none;
-    border-color: var(--accent);
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
 }
-.contact-form button {
-    cursor: pointer;
-    font-size: 1rem;
-}
+.folder-icon { font-size: 2.5rem; color: var(--accent); }
+.project-header a { color: var(--text-muted); font-size: 1.2rem; transition: color 0.3s ease; }
+.project-header a:hover { color: var(--accent); }
+.project-card h3 { font-size: 1.4rem; margin-bottom: 1rem; color: var(--text-main); }
+.project-card p { color: var(--text-muted); font-size: 0.95rem; flex-grow: 1; margin-bottom: 1.5rem; }
 
-footer {
-    text-align: center;
-    padding: 2rem;
-    color: var(--text-muted);
-    font-size: 0.9rem;
-}
+.tech-stack { display: flex; gap: 1rem; flex-wrap: wrap; font-size: 0.8rem; font-family: monospace; color: var(--text-muted); }
+.tech-stack span { color: var(--accent); background: rgba(100, 255, 218, 0.1); padding: 4px 8px; border-radius: 4px; }
+
+/* Contact Form */
+.contact-form { max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; }
+.contact-form input, .contact-form textarea { width: 100%; padding: 1rem; background: var(--bg-secondary); border: 1px solid transparent; color: var(--text-main); border-radius: 4px; font-family: inherit; }
+.contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--accent); }
+
+footer { text-align: center; padding: 2rem; color: var(--text-muted); font-size: 0.9rem; border-top: 1px solid var(--bg-secondary); }
 
 /* Animations */
-.cursor {
-    animation: blink 1s infinite;
-    color: var(--accent);
-}
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-}
+.cursor { animation: blink 1s infinite; color: var(--accent); }
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .nav-links { display: none; /* Add a hamburger menu for mobile later */ }
+    .stats-banner { flex-direction: column; gap: 2rem; text-align: center; }
+    .nav-links { display: none; }
     .hero h1 { font-size: 2.5rem; }
-    .hero h2 { font-size: 1.5rem; }
 }
-    </style>
-
-    <!-- Navigation -->
+</style>
     <nav id="navbar">
         <div class="nav-content">
             <a href="#home" class="logo">YK.</a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#projects">Work</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Hi, I'm <span class="highlight">Yasir Khan</span></h1>
-            <h2 class="typing-text">I am a <span id="typewriter"></span><span class="cursor">|</span></h2>
-            <p>Building robust digital solutions from the ground up, based right here in Bangalore.</p>
+            <h2 class="typing-text">I build <span id="typewriter"></span><span class="cursor">|</span></h2>
+            <p>A Full-Stack Web & App Developer based in Bangalore, specializing in high-performance platforms, SaaS products, and e-commerce solutions.</p>
+            
+            <div class="stats-banner">
+                <div class="stat-item">
+                    <h3>25+</h3>
+                    <p>Websites Deployed</p>
+                </div>
+                <div class="stat-item">
+                    <h3>3+</h3>
+                    <p>SaaS Apps Built</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100%</h3>
+                    <p>Client Satisfaction</p>
+                </div>
+            </div>
+
             <div class="hero-btns">
                 <a href="#projects" class="btn primary">View My Work</a>
                 <a href="#contact" class="btn secondary">Get In Touch</a>
@@ -257,66 +162,79 @@ footer {
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <p class="about-text">
-                I am a passionate software developer specializing in full-stack website and application development. With a strong foundation in modern frameworks and a keen eye for optimizing both front-end user experiences and back-end architecture, I build solutions that are as efficient under the hood as they are visually engaging. 
-            </p>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Technical Arsenal</h2>
-            <div class="skills-grid">
-                <div class="skill-card"><i class="fab fa-python"></i><p>Python</p></div>
-                <div class="skill-card"><i class="fas fa-server"></i><p>Django & Flask</p></div>
-                <div class="skill-card"><i class="fab fa-react"></i><p>React.js</p></div>
-                <div class="skill-card"><i class="fab fa-js"></i><p>JavaScript (ES6+)</p></div>
-                <div class="skill-card"><i class="fab fa-shopify"></i><p>Shopify Liquid</p></div>
-                <div class="skill-card"><i class="fas fa-database"></i><p>SQL & Databases</p></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">A selection of my best interactive web apps, e-commerce platforms, and digital products.</p>
+            
             <div class="projects-grid">
-                <!-- Project 1 -->
+                
                 <div class="project-card">
-                    <div class="project-info">
-                        <h3>Falcon Tech World</h3>
-                        <p>A comprehensive platform for IT services, hardware solutions, and web development consulting.</p>
-                        <div class="tech-stack">
-                            <span>Web Dev</span>
-                            <span>IT Solutions</span>
-                        </div>
+                    <div class="project-header">
+                        <i class="fas fa-shopping-bag folder-icon"></i>
+                        <a href="https://www.sanchvistudio.com" target="_blank"><i class="fas fa-external-link-alt"></i></a>
                     </div>
+                    <h3>Sanchvi Studio</h3>
+                    <p>E-commerce platform developed for Sanchvi, a premium fashion brand featured on national television via <strong>Sony's Shark Tank India</strong>. Built for high traffic and seamless transactions.</p>
+                    <div class="tech-stack"><span>E-commerce</span><span>UI/UX</span><span>Brand Portal</span></div>
                 </div>
-                <!-- Project 2 -->
+
                 <div class="project-card">
-                    <div class="project-info">
-                        <h3>Dynamic React Portfolio</h3>
-                        <p>A highly optimized, interactive portfolio application built to showcase creative professional work with smooth routing and component architecture.</p>
-                        <div class="tech-stack">
-                            <span>React.js</span>
-                            <span>CSS Modules</span>
-                        </div>
+                    <div class="project-header">
+                        <i class="fas fa-taxi folder-icon"></i>
                     </div>
+                    <h3>Cabify (Taxi Management)</h3>
+                    <p>A Rapido-style ride-hailing ecosystem. Features independent portals for Users, Drivers, and Admins, integrated with live map tracking APIs and accelerator data.</p>
+                    <div class="tech-stack"><span>Live Tracking</span><span>API Integration</span><span>Multi-Auth</span></div>
                 </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-cloud-upload-alt folder-icon"></i>
+                        <a href="https://storedrive.com" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <h3>Storedrive</h3>
+                    <p>A secure cloud media storage application akin to Google Drive. Allows users to upload, manage, and stream documents, music, and video files dynamically.</p>
+                    <div class="tech-stack"><span>Cloud Storage</span><span>Media Streaming</span><span>SaaS</span></div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-brain folder-icon"></i>
+                    </div>
+                    <h3>Mindring</h3>
+                    <p>A comprehensive Notion-style productivity workspace. Includes advanced features like to-do lists, rich-text notes, progress tracking, and dedicated meditation modules.</p>
+                    <div class="tech-stack"><span>Productivity</span><span>Interactive UI</span><span>Database</span></div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-microchip folder-icon"></i>
+                        <a href="https://falcontechworld.com" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <h3>Falcon Tech World</h3>
+                    <p>A full-scale online electronics and IT service website serving as the digital storefront for my startup, offering hardware solutions and web consulting.</p>
+                    <div class="tech-stack"><span>Business Site</span><span>Hardware Store</span></div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-motorcycle folder-icon"></i>
+                        <a href="https://almontech.com" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <h3>Almontech & Bike Rentals</h3>
+                    <p>Developed the Almontech platform alongside an online motorcycle booking and rental system designed for seamless reservation management.</p>
+                    <div class="tech-stack"><span>Booking System</span><span>Service Portal</span></div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Let's Connect</h2>
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">Interested in collaborating or have a project in mind? Let's build something great.</p>
             <form class="contact-form">
                 <input type="text" placeholder="Your Name" required>
                 <input type="email" placeholder="Your Email" required>
