@@ -189,3 +189,59 @@ body { background:#f7f8fc; }
   .pricing-grid .pricing-card { transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease; }
   .pricing-grid .pricing-card:hover { transform:translateY(-4px); box-shadow:0 20px 48px rgba(16,24,40,.12); }
 }
+
+/* Revised pricing: two customer segments */
+.pricing-segment-header{margin-top:54px;padding:28px 30px;display:flex;align-items:flex-end;justify-content:space-between;gap:30px;border:1px solid #d9deea;border-radius:18px;background:linear-gradient(135deg,#f7f9ff,#fff)}
+.pricing-segment-header h3{margin:7px 0 6px;color:#101828;font-size:30px}
+.pricing-segment-header p{margin:0;color:#667085;max-width:700px;line-height:1.65;font-size:14px}
+.segment-label{font-size:10px;letter-spacing:.16em;font-weight:800;color:#5577f1}
+.segment-range{font-size:18px;font-weight:800;color:#101828;white-space:nowrap}
+.business-segment{margin-top:78px;background:linear-gradient(135deg,#f8f5ff,#fff);border-color:#dfd5f7}
+.business-segment .segment-label{color:#7048b8}
+.pricing-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.business-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:1050px;margin-left:auto;margin-right:auto}
+.business-grid .pricing-card{min-height:100%}
+.pricing-custom{border:2px solid #7048b8 !important;background:linear-gradient(180deg,#faf7ff 0%,#fff 70%) !important}
+.custom-label{background:#7048b8;color:#fff}
+.best-for{margin:22px 0 0;padding-top:17px;border-top:1px solid #e4e7ec;color:#667085;font-size:12px;line-height:1.6}
+.best-for strong{color:#344054}
+.addons-panel{margin-top:28px;padding:30px;border:1px solid #d9deea;border-radius:18px;background:#fff;display:grid;grid-template-columns:.75fr 1.25fr;gap:35px;align-items:start;box-shadow:0 14px 38px rgba(16,24,40,.06)}
+.addons-panel h3{margin:7px 0 8px;color:#101828;font-size:25px}
+.addons-panel p{margin:0;color:#667085;line-height:1.65;font-size:13px}
+.addon-list{display:flex;flex-wrap:wrap;gap:9px}
+.addon-list span{padding:9px 12px;border:1px solid #d9deea;border-radius:999px;background:#f8faff;color:#344054;font-size:12px}
+@media(max-width:980px){
+  .pricing-segment-header{align-items:flex-start;flex-direction:column}.segment-range{white-space:normal}
+  .pricing-grid,.business-grid{grid-template-columns:1fr;max-width:650px}
+  .addons-panel{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .pricing-segment-header{padding:23px}.pricing-segment-header h3{font-size:25px}.addons-panel{padding:22px}.addon-list{gap:7px}.addon-list span{font-size:11px}
+}
+
+/* Package consultation */
+.pricing-actions{display:grid;grid-template-columns:1fr;gap:8px;margin-bottom:22px}
+.pricing-actions .pricing-button{margin:0;width:100%}
+.button-whatsapp{background:#dff8e7!important;color:#116b3a!important;border:1px solid #9bd8b2!important}
+.button-whatsapp:hover{background:#c9f1d7!important;border-color:#72c794!important}
+.button-email{background:#eef2ff!important;color:#2948a8!important;border:1px solid #b8c6ff!important}
+.button-email:hover{background:#e2e8ff!important;border-color:#8ea6ff!important}
+.consult-modal{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;padding:22px}
+.consult-modal.is-open{display:flex}
+.consult-backdrop{position:absolute;inset:0;background:rgba(4,8,18,.76);backdrop-filter:blur(8px)}
+.consult-dialog{position:relative;width:min(760px,100%);max-height:min(90vh,850px);overflow:auto;background:#111827;color:#eef2ff;border:1px solid rgba(255,255,255,.13);box-shadow:0 30px 100px rgba(0,0,0,.45);padding:32px;border-radius:18px;z-index:1}
+.consult-close{position:absolute;right:18px;top:14px;border:0;background:transparent;color:#aeb8ca;font-size:30px;cursor:pointer;line-height:1}
+.consult-dialog h2{font-size:30px;margin:7px 35px 8px 0;letter-spacing:-1px}
+.consult-dialog h2 span{color:#91a9ff}
+.consult-subtitle{color:#9da8bc;font-size:12px;line-height:1.7;margin-bottom:22px}
+.consult-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px}
+.consult-dialog label{display:block;color:#b9c3d5;font-size:11px;font-weight:700}
+.consult-dialog input,.consult-dialog textarea{display:block;width:100%;box-sizing:border-box;margin-top:7px;background:#0b1220;color:#f5f7ff;border:1px solid #2a3549;border-radius:9px;padding:12px;font:500 12px/1.5 var(--body);outline:none}
+.consult-dialog input:focus,.consult-dialog textarea:focus{border-color:#708cff;box-shadow:0 0 0 3px rgba(112,140,255,.12)}
+.consult-dialog textarea{resize:vertical;min-height:230px}
+.consult-label{margin-top:4px}
+.consult-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.consult-actions .button{flex:1;min-width:180px;cursor:pointer}
+.consult-note{font-size:10px;color:#7f8ba0;line-height:1.6;margin:13px 0 0}
+body.modal-open{overflow:hidden}
+@media(max-width:650px){.consult-modal{padding:12px}.consult-dialog{padding:25px 19px;border-radius:15px}.consult-grid{grid-template-columns:1fr}.consult-dialog h2{font-size:24px}.consult-actions{display:grid;grid-template-columns:1fr}.consult-actions .button{width:100%}}
