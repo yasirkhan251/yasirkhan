@@ -30,8 +30,8 @@ sections.forEach(section => sectionObserver.observe(section));
 
 // Package consultation links
 // Replace these two values with your real contact details before publishing.
-const CONSULT_EMAIL = 'yasirkhan251198@gmail.com';
-const WHATSAPP_NUMBER = '918073404431'; // country code + number, digits only
+const CONSULT_EMAIL = 'your-email@example.com';
+const WHATSAPP_NUMBER = '91XXXXXXXXXX'; // country code + number, digits only
 
 const consultModal = document.getElementById('consultModal');
 const consultPackageName = document.getElementById('consultPackageName');
