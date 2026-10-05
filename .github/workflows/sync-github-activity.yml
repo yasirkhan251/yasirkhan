@@ -1,0 +1,102 @@
+name: Sync GitHub Activity
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+  push:
+    paths-ignore:
+      - "github-activity.json"
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sync contribution calendar
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python - <<'PY'
+          import datetime as dt
+          import json
+          import os
+          import subprocess
+          import urllib.request
+
+          token = os.environ["GH_TOKEN"]
+          year = dt.datetime.now(dt.timezone.utc).year
+          start = f"{year}-01-01T00:00:00Z"
+          end = f"{year + 1}-01-01T00:00:00Z"
+
+          query = """
+          query($login:String!, $from:DateTime!, $to:DateTime!) {
+            user(login:$login) {
+              contributionsCollection(from:$from, to:$to) {
+                contributionCalendar {
+                  totalContributions
+                  weeks {
+                    firstDay
+                    contributionDays {
+                      date
+                      contributionCount
+                      color
+                      contributionLevel
+                    }
+                  }
+                }
+              }
+            }
+          }
+          """
+
+          payload = json.dumps({
+              "query": query,
+              "variables": {
+                  "login": "yasirkhan251",
+                  "from": start,
+                  "to": end
+              }
+          }).encode()
+
+          request = urllib.request.Request(
+              "https://api.github.com/graphql",
+              data=payload,
+              headers={
+                  "Authorization": f"Bearer {token}",
+                  "Content-Type": "application/json",
+                  "User-Agent": "yasirkhan-portfolio"
+              },
+              method="POST"
+          )
+
+          with urllib.request.urlopen(request) as response:
+              result = json.load(response)
+
+          if result.get("errors"):
+              raise SystemExit(json.dumps(result["errors"], indent=2))
+
+          calendar = result["data"]["user"]["contributionsCollection"]["contributionCalendar"]
+
+          output = {
+              "year": year,
+              "totalContributions": calendar["totalContributions"],
+              "generatedAt": dt.datetime.now(dt.timezone.utc).isoformat(),
+              "weeks": calendar["weeks"]
+          }
+
+          with open("github-activity.json", "w", encoding="utf-8") as file:
+              json.dump(output, file, indent=2)
+
+          PY
+
+      - name: Commit updated activity data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add github-activity.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Update GitHub activity data"
+          git push
