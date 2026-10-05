@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="Falcon — Yasir Khan project case study: what it is, how it works, technology stack, workflow and backend role.">
+  <title>Falcon | Yasir Khan Portfolio</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="project.css">
+</head>
+<body class="project-page">
+  <header class="project-topbar">
+    <div class="project-shell project-topbar-inner">
+      <a class="project-back" href="../index.html#work">← Back to My Work</a>
+      <div class="project-top-actions">
+        <a href="../index.html#work">All Projects</a>
+        <a class="primary" href="https://github.com/yasirkhan251/Falcon7.1" target="_blank" rel="noreferrer">View GitHub ↗</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="project-shell">
+    <section class="project-hero" data-reveal>
+      <div>
+        <span class="project-kicker">Business platform · Service + booking</span>
+        <h1>Falcon</h1>
+        <span class="status-badge ">● Substantial</span>
+        <p class="project-lead">A Django business platform that connects authentication, service catalogues, product management, booking workflows, location information and administration.</p>
+        <div class="project-meta"><span>Django 5.2</span><span>Python</span><span>SQLite</span><span>Custom Auth</span><span>OTP</span><span>Admin Dashboard</span></div>
+      </div>
+      <div class="project-hero-art">
+        <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1400&q=80" alt="Falcon project visual">
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">01 · OVERVIEW</span>
+        <h2>What is Falcon?</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card-detail" data-reveal>
+          <h3>What the project does</h3>
+          <p>Falcon is designed as an operational website for a service business. Instead of stopping at marketing pages, it includes customers, service/product data, booking records, addresses, OTP authentication and an administrative back office.</p>
+        </article>
+        <article class="project-card-detail" data-reveal>
+          <h3>How it benefits the user/business</h3>
+          <ul><li>Combines customer-facing service discovery with operational workflows.</li><li>Supports custom authentication using phone/email and OTP flows.</li><li>Turns service and product information into managed backend records.</li><li>Adds booking status and customer history rather than only collecting enquiries.</li></ul>
+        </article>
+        <article class="project-card-detail full" data-reveal>
+          <h3>Platform & environment</h3>
+          <p>Full-stack Django web application with a custom user model, SQLite development database, server-rendered templates, static/media handling and administrative modules.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">02 · FEATURES</span>
+        <h2>What is included?</h2>
+      </div>
+      <div class="project-feature-list">
+        <div data-reveal><strong>01 · Custom MyUser authentication model</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>02 · Phone/email login</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>03 · Registration and OTP verification</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>04 · Password recovery</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>05 · Service categories and service products</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>06 · Admin product/category management</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>07 · Booking creation and appointment data</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>08 · Booking addresses and coordinates</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>09 · Booking status workflow</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>10 · Customer booking history</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>11 · Admin dashboard and reporting</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>12 · Service/product display-order management</strong><span>Implemented as part of the project's current scope.</span></div>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">03 · WORKFLOW</span>
+        <h2>How the project works</h2>
+      </div>
+      <article class="project-card-detail full" data-reveal>
+        <pre class="project-flow">Customer
+  ↓
+Website / Services
+  ↓
+Choose Service or Product
+  ↓
+Login / Register / Verify OTP
+  ↓
+Booking Form
+  ↓
+Address + Appointment + Coordinates
+  ↓
+Booking Created
+  ↓
+Pending
+  ↓
+Assigned
+  ↓
+In Progress
+  ↓
+Completed / Cancelled
+
+Admin
+  ↓
+Dashboard → Manage Catalog → Review Bookings → Update Status</pre>
+      </article>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">04 · BACKEND</span>
+        <h2>What role does the backend play?</h2>
+      </div>
+      <article class="project-backend" data-reveal>
+        <p>The backend/application layer is responsible for connecting the interface to the project's data, business logic and user workflows.</p>
+        <ul><li>Django models define users, OTPs, passwords, categories, products, services, bookings, addresses and booking status.</li><li>Views coordinate authentication, catalogue access, booking creation and customer history.</li><li>The admin modules provide operational controls over products, categories, services and bookings.</li><li>The backend is the core of the product: it turns a static service website into an actual service-management workflow.</li></ul>
+      </article>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">05 · USAGE</span>
+        <h2>How is it used?</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card-detail full" data-reveal>
+          <p>A visitor can explore services, register/login, choose a service or product, provide appointment and location information, create a booking and later view booking status/history. Administrators manage the catalog and booking lifecycle from the admin side.</p>
+          <div class="project-note"><strong>Project maturity:</strong> Substantial. The purpose of this page is to explain the implementation that exists in the repository, while keeping production-readiness claims separate.</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">06 · LIMITATIONS</span>
+        <h2>Current boundaries</h2>
+      </div>
+      <article class="project-card-detail full" data-reveal>
+        <p>The current repository includes development-oriented configuration and powerful admin tooling. Production deployment should use environment-based secrets, hardened settings, proper permissions, production database/storage and testing.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="project-shell project-footer">
+    <span>Yasir Khan · Project Case Study</span>
+    <a href="../index.html#work">Back to portfolio ↑</a>
+  </footer>
+
+  <script src="project.js"></script>
+</body>
+</html>
