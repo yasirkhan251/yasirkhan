@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="Sanchvi — Yasir Khan project case study: what it is, how it works, technology stack, workflow and backend role.">
+  <title>Sanchvi | Yasir Khan Portfolio</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="project.css">
+</head>
+<body class="project-page">
+  <header class="project-topbar">
+    <div class="project-shell project-topbar-inner">
+      <a class="project-back" href="../index.html#work">← Back to My Work</a>
+      <div class="project-top-actions">
+        <a href="../index.html#work">All Projects</a>
+        <a class="primary" href="https://github.com/yasirkhan251/Sanchvi" target="_blank" rel="noreferrer">View GitHub ↗</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="project-shell">
+    <section class="project-hero" data-reveal>
+      <div>
+        <span class="project-kicker">E-commerce · Full-stack Django</span>
+        <h1>Sanchvi</h1>
+        <span class="status-badge ">● Substantial</span>
+        <p class="project-lead">A full Django e-commerce application built around product discovery, product customization, cart management, checkout, payments, orders and customer accounts.</p>
+        <div class="project-meta"><span>Django</span><span>Python</span><span>SQLite</span><span>PayPal IPN</span><span>PhonePe</span><span>HTML/CSS/JS</span></div>
+      </div>
+      <div class="project-hero-art">
+        <img src="https://raw.githubusercontent.com/yasirkhan251/Sanchvi/main/static/images/banner.webp" alt="Sanchvi project visual">
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">01 · OVERVIEW</span>
+        <h2>What is Sanchvi?</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card-detail" data-reveal>
+          <h3>What the project does</h3>
+          <p>Sanchvi is an online-store application rather than a simple product catalogue. The codebase connects the customer-facing shopping journey with product data, cart state, shipping information, order records and payment flows.</p>
+        </article>
+        <article class="project-card-detail" data-reveal>
+          <h3>How it benefits the user/business</h3>
+          <ul><li>Provides an end-to-end shopping workflow in one application.</li><li>Supports size, colour and pricing variations for products.</li><li>Connects checkout, shipping and order tracking concepts.</li><li>Demonstrates practical Django models, views, templates and payment integration.</li></ul>
+        </article>
+        <article class="project-card-detail full" data-reveal>
+          <h3>Platform & environment</h3>
+          <p>Web application — Django/Python backend with server-rendered templates and SQLite for development.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">02 · FEATURES</span>
+        <h2>What is included?</h2>
+      </div>
+      <div class="project-feature-list">
+        <div data-reveal><strong>01 · Custom user accounts and authentication</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>02 · Category and product catalogue</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>03 · Product sizes, prices, colours and images</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>04 · Cart and checkout workflow</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>05 · Shipping and billing details</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>06 · PhonePe and PayPal payment flows</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>07 · Order status and delivery status</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>08 · Invoice/order confirmation</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>09 · Admin product/category management</strong><span>Implemented as part of the project's current scope.</span></div>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">03 · WORKFLOW</span>
+        <h2>How the project works</h2>
+      </div>
+      <article class="project-card-detail full" data-reveal>
+        <pre class="project-flow">Visitor
+  ↓
+Browse Categories / Search
+  ↓
+Product Details
+  ↓
+Choose Size + Colour + Quantity
+  ↓
+Add to Cart
+  ↓
+Shipping + Billing
+  ↓
+Checkout
+  ├── PhonePe
+  └── PayPal
+  ↓
+Payment Result
+  ↓
+Order + Invoice
+  ↓
+Order Tracking / History</pre>
+      </article>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">04 · BACKEND</span>
+        <h2>What role does the backend play?</h2>
+      </div>
+      <article class="project-backend" data-reveal>
+        <p>The backend/application layer is responsible for connecting the interface to the project's data, business logic and user workflows.</p>
+        <ul><li>Models hold products, prices, colours, images, carts, orders, order items and shipping data.</li><li>Authentication is handled through a custom user model and account views.</li><li>Payment views connect the checkout state with PhonePe/PayPal flows.</li><li>Admin views provide product/category and operational management.</li><li>The backend turns the storefront into a data-driven application rather than a static catalogue.</li></ul>
+      </article>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">05 · USAGE</span>
+        <h2>How is it used?</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card-detail full" data-reveal>
+          <p>A customer can register, browse the catalogue, choose product variations, add items to a cart, enter delivery information, select a payment method, and then review order status/history.</p>
+          <div class="project-note"><strong>Project maturity:</strong> Substantial. The purpose of this page is to explain the implementation that exists in the repository, while keeping production-readiness claims separate.</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">06 · LIMITATIONS</span>
+        <h2>Current boundaries</h2>
+      </div>
+      <article class="project-card-detail full" data-reveal>
+        <p>The repository is a substantial project, but production hardening would still require secret management, stronger deployment configuration, production database/storage, testing and payment/security review.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="project-shell project-footer">
+    <span>Yasir Khan · Project Case Study</span>
+    <a href="../index.html#work">Back to portfolio ↑</a>
+  </footer>
+
+  <script src="project.js"></script>
+</body>
+</html>
