@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="Project-Tube — Yasir Khan project case study: what it is, how it works, technology stack, workflow and backend role.">
+  <title>Project-Tube | Yasir Khan Portfolio</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="project.css">
+</head>
+<body class="project-page">
+  <header class="project-topbar">
+    <div class="project-shell project-topbar-inner">
+      <a class="project-back" href="../index.html#work">← Back to My Work</a>
+      <div class="project-top-actions">
+        <a href="../index.html#work">All Projects</a>
+        <a class="primary" href="https://github.com/yasirkhan251/Project-Tube" target="_blank" rel="noreferrer">View GitHub ↗</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="project-shell">
+    <section class="project-hero" data-reveal>
+      <div>
+        <span class="project-kicker">Foundation · Local video platform</span>
+        <h1>Project-Tube</h1>
+        <span class="status-badge foundation">● Prototype / Foundation</span>
+        <p class="project-lead">A Flask-based local video hosting and playback prototype using SQLite for metadata and local file storage.</p>
+        <div class="project-meta"><span>Flask</span><span>Python</span><span>SQLite</span><span>HTML/CSS</span><span>JavaScript</span><span>send_file</span></div>
+      </div>
+      <div class="project-hero-art">
+        <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1400&q=80" alt="Project-Tube project visual">
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">01 · OVERVIEW</span>
+        <h2>What is Project-Tube?</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card-detail" data-reveal>
+          <h3>What the project does</h3>
+          <p>Project-Tube is a small media-server foundation that explores uploading video files, storing their paths in SQLite and serving them back through a browser player.</p>
+        </article>
+        <article class="project-card-detail" data-reveal>
+          <h3>How it benefits the user/business</h3>
+          <ul><li>Demonstrates the basic architecture of a local video platform.</li><li>Connects file uploads with metadata persistence.</li><li>Provides browser playback for supported formats.</li><li>Makes a useful foundation for later authentication, metadata and streaming improvements.</li></ul>
+        </article>
+        <article class="project-card-detail full" data-reveal>
+          <h3>Platform & environment</h3>
+          <p>Local Flask web application using SQLite and a local uploads directory.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">02 · FEATURES</span>
+        <h2>What is included?</h2>
+      </div>
+      <div class="project-feature-list">
+        <div data-reveal><strong>01 · Video upload</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>02 · Local file storage</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>03 · SQLite metadata</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>04 · Supported extension checking</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>05 · Video listing</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>06 · Browser playback</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>07 · Dedicated player page</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>08 · Simple local/LAN usage</strong><span>Implemented as part of the project's current scope.</span></div>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">03 · WORKFLOW</span>
+        <h2>How the project works</h2>
+      </div>
+      <article class="project-card-detail full" data-reveal>
+        <pre class="project-flow">Browser
+  ↓
+Upload Page
+  ↓
+Validate Extension
+  ↓
+Save Video File
+  ↓
+Store Path in SQLite
+  ↓
+Video Listing
+  ↓
+Select Video
+  ↓
+send_file()
+  ↓
+Browser Playback</pre>
+      </article>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">04 · BACKEND</span>
+        <h2>What role does the backend play?</h2>
+      </div>
+      <article class="project-backend" data-reveal>
+        <p>The backend/application layer is responsible for connecting the interface to the project's data, business logic and user workflows.</p>
+        <ul><li>Flask routes receive uploads and connect them with SQLite metadata.</li><li>The database stores the relationship between a video record and its stored file path.</li><li>The backend serves the selected video back to the browser through Flask's file-serving mechanism.</li></ul>
+      </article>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">05 · USAGE</span>
+        <h2>How is it used?</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card-detail full" data-reveal>
+          <p>A user opens the local web app, uploads a supported video, sees it in the video interface and opens it in the browser player.</p>
+          <div class="project-note"><strong>Project maturity:</strong> Prototype / Foundation. The purpose of this page is to explain the implementation that exists in the repository, while keeping production-readiness claims separate.</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">06 · LIMITATIONS</span>
+        <h2>Current boundaries</h2>
+      </div>
+      <article class="project-card-detail full" data-reveal>
+        <p>This is not a YouTube-scale streaming system. Authentication, secure uploads, thumbnails, rich metadata, range-aware streaming, storage abstraction and scalable delivery would be required for production.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="project-shell project-footer">
+    <span>Yasir Khan · Project Case Study</span>
+    <a href="../index.html#work">Back to portfolio ↑</a>
+  </footer>
+
+  <script src="project.js"></script>
+</body>
+</html>
