@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="MindRing — Yasir Khan project case study: what it is, how it works, technology stack, workflow and backend role.">
+  <title>MindRing | Yasir Khan Portfolio</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="project.css">
+</head>
+<body class="project-page">
+  <header class="project-topbar">
+    <div class="project-shell project-topbar-inner">
+      <a class="project-back" href="../index.html#work">← Back to My Work</a>
+      <div class="project-top-actions">
+        <a href="../index.html#work">All Projects</a>
+        <a class="primary" href="https://github.com/yasirkhan251/MindRing" target="_blank" rel="noreferrer">View GitHub ↗</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="project-shell">
+    <section class="project-hero" data-reveal>
+      <div>
+        <span class="project-kicker">Productivity · Wellbeing web application</span>
+        <h1>MindRing</h1>
+        <span class="status-badge ">● Substantial</span>
+        <p class="project-lead">A Flask productivity and wellbeing application combining task management, notes, projects, journals, personal/professional spaces, feedback and relaxation-focused content.</p>
+        <div class="project-meta"><span>Flask</span><span>Python</span><span>MySQL</span><span>SQLite</span><span>Flask-Login</span><span>Passlib</span></div>
+      </div>
+      <div class="project-hero-art">
+        <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1400&q=80" alt="MindRing project visual">
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">01 · OVERVIEW</span>
+        <h2>What is MindRing?</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card-detail" data-reveal>
+          <h3>What the project does</h3>
+          <p>MindRing was built as a broader personal productivity environment rather than a single CRUD feature. It brings task, note, project and journal workflows together with personal/professional spaces and wellbeing content.</p>
+        </article>
+        <article class="project-card-detail" data-reveal>
+          <h3>How it benefits the user/business</h3>
+          <ul><li>Combines several everyday productivity workflows.</li><li>Provides separate personal and professional organization concepts.</li><li>Demonstrates both MySQL-backed and self-contained SQLite implementations.</li><li>Shows authentication, CRUD, admin and content-library patterns in one project.</li></ul>
+        </article>
+        <article class="project-card-detail full" data-reveal>
+          <h3>Platform & environment</h3>
+          <p>Flask web application with a MySQL-backed implementation and a separate SQLite implementation for easier local use.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">02 · FEATURES</span>
+        <h2>What is included?</h2>
+      </div>
+      <div class="project-feature-list">
+        <div data-reveal><strong>01 · Registration and login</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>02 · Task CRUD</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>03 · Notes CRUD</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>04 · Project management</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>05 · Professional notes</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>06 · Personal notes</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>07 · Journal entries</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>08 · Personal/professional spaces</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>09 · Admin and feedback workflows</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>10 · Meditation content routes</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>11 · Relaxation content routes</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>12 · Passlib password hashing</strong><span>Implemented as part of the project's current scope.</span></div>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">03 · WORKFLOW</span>
+        <h2>How the project works</h2>
+      </div>
+      <article class="project-card-detail full" data-reveal>
+        <pre class="project-flow">Login / Register
+   ↓
+Homepage
+   ├── To-Do
+   ├── Notes
+   ├── Projects
+   ├── Professional Notes
+   ├── Personal Notes
+   ├── Journal
+   ├── Personal Space
+   ├── Professional Space
+   └── Wellbeing Content
+             ↓
+       Personal Data</pre>
+      </article>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">04 · BACKEND</span>
+        <h2>What role does the backend play?</h2>
+      </div>
+      <article class="project-backend" data-reveal>
+        <p>The backend/application layer is responsible for connecting the interface to the project's data, business logic and user workflows.</p>
+        <ul><li>The backend stores tasks, notes, projects, journals and feedback in database tables.</li><li>Authentication and sessions control access to user-specific areas.</li><li>The SQLite variant initializes its own schema, making the project easier to run locally.</li><li>Admin routes provide management workflows on top of the same application data.</li><li>Flask acts as the application layer connecting browser actions to persistence and authentication.</li></ul>
+      </article>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">05 · USAGE</span>
+        <h2>How is it used?</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card-detail full" data-reveal>
+          <p>A user signs in and works from a central dashboard, moving between tasks, notes, projects and journals. Administrative and feedback workflows are handled separately.</p>
+          <div class="project-note"><strong>Project maturity:</strong> Substantial. The purpose of this page is to explain the implementation that exists in the repository, while keeping production-readiness claims separate.</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">06 · LIMITATIONS</span>
+        <h2>Current boundaries</h2>
+      </div>
+      <article class="project-card-detail full" data-reveal>
+        <p>Some media paths in the repository are environment-specific, and the project would need stronger production authentication/authorization, deployment configuration and asset handling.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="project-shell project-footer">
+    <span>Yasir Khan · Project Case Study</span>
+    <a href="../index.html#work">Back to portfolio ↑</a>
+  </footer>
+
+  <script src="project.js"></script>
+</body>
+</html>
