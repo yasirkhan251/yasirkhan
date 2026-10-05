@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="StoreDrive — Yasir Khan project case study: what it is, how it works, technology stack, workflow and backend role.">
+  <title>StoreDrive | Yasir Khan Portfolio</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="project.css">
+</head>
+<body class="project-page">
+  <header class="project-topbar">
+    <div class="project-shell project-topbar-inner">
+      <a class="project-back" href="../index.html#work">← Back to My Work</a>
+      <div class="project-top-actions">
+        <a href="../index.html#work">All Projects</a>
+        <a class="primary" href="https://github.com/yasirkhan251/StoreDrive" target="_blank" rel="noreferrer">View GitHub ↗</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="project-shell">
+    <section class="project-hero" data-reveal>
+      <div>
+        <span class="project-kicker">Web application · Media management</span>
+        <h1>StoreDrive</h1>
+        <span class="status-badge ">● Substantial</span>
+        <p class="project-lead">A Django personal media and storage-style application for managing photos, music, videos and movies from a single authenticated interface.</p>
+        <div class="project-meta"><span>Django</span><span>Python</span><span>SQLite</span><span>Pillow</span><span>Mutagen</span><span>SMTP</span></div>
+      </div>
+      <div class="project-hero-art">
+        <img src="https://images.unsplash.com/photo-1554200876-56c2f25224fa?auto=format&fit=crop&w=1400&q=80" alt="StoreDrive project visual">
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">01 · OVERVIEW</span>
+        <h2>What is StoreDrive?</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card-detail" data-reveal>
+          <h3>What the project does</h3>
+          <p>StoreDrive explores a personal cloud/media dashboard concept. Users can authenticate, manage uploaded media and play supported content in the browser through organized media interfaces.</p>
+        </article>
+        <article class="project-card-detail" data-reveal>
+          <h3>How it benefits the user/business</h3>
+          <ul><li>Brings different personal media types into one interface.</li><li>Provides user-specific upload and deletion workflows.</li><li>Supports browser playback for supported media.</li><li>Demonstrates file-handling and authenticated Django application structure.</li></ul>
+        </article>
+        <article class="project-card-detail full" data-reveal>
+          <h3>Platform & environment</h3>
+          <p>Django web application using Python, SQLite for development, media/static storage and browser-side playback.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">02 · FEATURES</span>
+        <h2>What is included?</h2>
+      </div>
+      <div class="project-feature-list">
+        <div data-reveal><strong>01 · User authentication</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>02 · Profile/account features</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>03 · Password recovery</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>04 · Photo management</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>05 · Music management</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>06 · Video/movie management</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>07 · Media uploads</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>08 · Media deletion</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>09 · Browser playback</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>10 · SMTP-based recovery flow</strong><span>Implemented as part of the project's current scope.</span></div>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">03 · WORKFLOW</span>
+        <h2>How the project works</h2>
+      </div>
+      <article class="project-card-detail full" data-reveal>
+        <pre class="project-flow">Login
+  ↓
+Personal Dashboard
+  ├── Photos
+  ├── Music
+  ├── Videos
+  └── Movies
+        ↓
+Upload / List / Delete
+        ↓
+Stored Media
+        ↓
+Browser Playback</pre>
+      </article>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">04 · BACKEND</span>
+        <h2>What role does the backend play?</h2>
+      </div>
+      <article class="project-backend" data-reveal>
+        <p>The backend/application layer is responsible for connecting the interface to the project's data, business logic and user workflows.</p>
+        <ul><li>Authentication ensures media workflows are connected to a user context.</li><li>Django views receive upload/delete requests and connect them to stored media.</li><li>Media processing uses libraries such as Pillow and Mutagen where required.</li><li>The backend provides the file-management layer behind the visual media dashboard.</li></ul>
+      </article>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">05 · USAGE</span>
+        <h2>How is it used?</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card-detail full" data-reveal>
+          <p>A user signs in, opens a media category, uploads or removes files, and plays compatible content directly in the browser.</p>
+          <div class="project-note"><strong>Project maturity:</strong> Substantial. The purpose of this page is to explain the implementation that exists in the repository, while keeping production-readiness claims separate.</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">06 · LIMITATIONS</span>
+        <h2>Current boundaries</h2>
+      </div>
+      <article class="project-card-detail full" data-reveal>
+        <p>The current implementation is a personal/development media platform. A production cloud drive would need object storage, access-control hardening, quotas, background processing, scalable delivery and stronger file validation.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="project-shell project-footer">
+    <span>Yasir Khan · Project Case Study</span>
+    <a href="../index.html#work">Back to portfolio ↑</a>
+  </footer>
+
+  <script src="project.js"></script>
+</body>
+</html>
