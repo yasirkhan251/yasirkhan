@@ -107,6 +107,77 @@ document.getElementById('sendConsultWhatsApp')?.addEventListener('click', () => 
 });
 
 
+
+/* Dynamic GitHub contribution calendar */
+async function loadGithubActivity() {
+  const title = document.getElementById('githubContributionTitle');
+  const subtext = document.getElementById('githubContributionSubtext');
+  const grid = document.getElementById('githubContributionGrid');
+  const updated = document.getElementById('githubContributionUpdated');
+
+  if (!title || !subtext || !grid || !updated) return;
+
+  try {
+    const response = await fetch('github-activity.json?ts=' + Date.now(), {
+      cache: 'no-store'
+    });
+
+    if (!response.ok) throw new Error('GitHub activity data unavailable.');
+
+    const data = await response.json();
+    const year = Number(data.year);
+    const total = Number(data.totalContributions || 0);
+
+    title.textContent = total + ' contributions in ' + year + '.';
+    subtext.textContent = 'Automatically synced from GitHub.';
+    grid.innerHTML = '';
+
+    const levelMap = {
+      NONE: 0,
+      FIRST_QUARTILE: 1,
+      SECOND_QUARTILE: 2,
+      THIRD_QUARTILE: 3,
+      FOURTH_QUARTILE: 4
+    };
+
+    (data.weeks || []).forEach((week) => {
+      const weekColumn = document.createElement('div');
+      weekColumn.className = 'contribution-week';
+      weekColumn.setAttribute('aria-hidden', 'true');
+
+      (week.contributionDays || []).forEach((day) => {
+        const cell = document.createElement('span');
+        const level = levelMap[day.contributionLevel] ?? 0;
+        const count = Number(day.contributionCount || 0);
+
+        cell.className = 'contribution-cell level-' + level;
+        cell.title = count + ' contribution' + (count === 1 ? '' : 's') + ' on ' + day.date;
+        cell.setAttribute('aria-label', cell.title);
+
+        if (day.color) {
+          cell.style.backgroundColor = day.color;
+        }
+
+        weekColumn.appendChild(cell);
+      });
+
+      grid.appendChild(weekColumn);
+    });
+
+    const generatedAt = data.generatedAt ? new Date(data.generatedAt) : null;
+    updated.textContent = generatedAt && !Number.isNaN(generatedAt.getTime())
+      ? 'Synced ' + generatedAt.toLocaleString()
+      : 'Synced from GitHub';
+  } catch (error) {
+    console.warn('GitHub activity sync failed:', error);
+    title.textContent = 'GitHub contributions';
+    subtext.textContent = 'Open GitHub to view the latest contribution activity.';
+    updated.textContent = 'Live data temporarily unavailable';
+  }
+}
+
+loadGithubActivity();
+
 /* Portfolio project filtering */
 const projectFilters = document.querySelectorAll('.work-filter');
 const projectCards = document.querySelectorAll('.project-showcase .project-card');
