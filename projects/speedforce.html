@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="SpeedForce — Yasir Khan project case study: what it is, how it works, technology stack, workflow and backend role.">
+  <title>SpeedForce | Yasir Khan Portfolio</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="project.css">
+</head>
+<body class="project-page">
+  <header class="project-topbar">
+    <div class="project-shell project-topbar-inner">
+      <a class="project-back" href="../index.html#work">← Back to My Work</a>
+      <div class="project-top-actions">
+        <a href="../index.html#work">All Projects</a>
+        <a class="primary" href="https://github.com/yasirkhan251/speedforce" target="_blank" rel="noreferrer">View GitHub ↗</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="project-shell">
+    <section class="project-hero" data-reveal>
+      <div>
+        <span class="project-kicker">Foundation · Service website</span>
+        <h1>SpeedForce</h1>
+        <span class="status-badge foundation">● Foundation</span>
+        <p class="project-lead">A Django service-website foundation with responsive layouts, hero slides, service categories, pricing, testimonials, FAQ and frontend interaction patterns.</p>
+        <div class="project-meta"><span>Django</span><span>Python</span><span>HTML</span><span>CSS</span><span>Tailwind CDN</span><span>JavaScript</span></div>
+      </div>
+      <div class="project-hero-art">
+        <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1400&q=80" alt="SpeedForce project visual">
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">01 · OVERVIEW</span>
+        <h2>What is SpeedForce?</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card-detail" data-reveal>
+          <h3>What the project does</h3>
+          <p>SpeedForce is a frontend-heavy Django foundation for a local service business. The main emphasis is on information architecture, service presentation and reusable website patterns.</p>
+        </article>
+        <article class="project-card-detail" data-reveal>
+          <h3>How it benefits the user/business</h3>
+          <ul><li>Provides a clean starting point for a service-business website.</li><li>Demonstrates responsive navigation and multi-section layouts.</li><li>Shows category, sorting and service-card presentation concepts.</li><li>Leaves a clear base for later booking, authentication and backend expansion.</li></ul>
+        </article>
+        <article class="project-card-detail full" data-reveal>
+          <h3>Platform & environment</h3>
+          <p>Django project with SQLite development configuration and server-rendered templates.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">02 · FEATURES</span>
+        <h2>What is included?</h2>
+      </div>
+      <div class="project-feature-list">
+        <div data-reveal><strong>01 · Responsive navigation</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>02 · Hero carousel</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>03 · Service categories</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>04 · Service pricing cards</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>05 · Sorting controls</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>06 · Testimonials</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>07 · FAQ</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>08 · Contact section</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>09 · Team section</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>10 · Mobile-friendly layouts</strong><span>Implemented as part of the project's current scope.</span></div>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">03 · WORKFLOW</span>
+        <h2>How the project works</h2>
+      </div>
+      <article class="project-card-detail full" data-reveal>
+        <pre class="project-flow">Visitor
+  ↓
+Home
+  ├── Hero
+  ├── Why Choose Us
+  ├── Testimonials
+  ├── Pricing
+  ├── FAQ
+  └── Contact
+        ↓
+Services
+  ↓
+Category Tabs
+  ↓
+Service Cards
+  ↓
+Filter / Sort</pre>
+      </article>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">04 · BACKEND</span>
+        <h2>What role does the backend play?</h2>
+      </div>
+      <article class="project-backend" data-reveal>
+        <p>The backend/application layer is responsible for connecting the interface to the project's data, business logic and user workflows.</p>
+        <ul><li>Django currently provides the project structure and URL/template layer.</li><li>The current implementation does not yet contain the full custom booking/database workflow.</li><li>This makes SpeedForce useful as a foundation that can be extended into a larger service platform.</li></ul>
+      </article>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">05 · USAGE</span>
+        <h2>How is it used?</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card-detail full" data-reveal>
+          <p>Visitors browse the home page, inspect service categories and use filtering/sorting UI to explore service offerings.</p>
+          <div class="project-note"><strong>Project maturity:</strong> Foundation. The purpose of this page is to explain the implementation that exists in the repository, while keeping production-readiness claims separate.</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">06 · LIMITATIONS</span>
+        <h2>Current boundaries</h2>
+      </div>
+      <article class="project-card-detail full" data-reveal>
+        <p>Custom models, real bookings, payments, dashboards and notifications are not implemented in the current foundation.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="project-shell project-footer">
+    <span>Yasir Khan · Project Case Study</span>
+    <a href="../index.html#work">Back to portfolio ↑</a>
+  </footer>
+
+  <script src="project.js"></script>
+</body>
+</html>
