@@ -3,7 +3,7 @@
   --p-bg:#f5f7fb; --p-card:#fff; --p-ink:#101828; --p-muted:#667085;
   --p-line:#e4e7ec; --p-brand:#5577f1; --p-brand2:#8b67e9;
   --p-dark:#0b1220; --p-dark2:#111827;
-}
+} 
 .project-page{background:var(--p-bg);color:var(--p-ink);min-height:100vh}
 .project-shell{width:min(1180px,calc(100% - 40px));margin:0 auto}
 .project-topbar{padding:20px 0;border-bottom:1px solid var(--p-line);background:rgba(255,255,255,.88);backdrop-filter:blur(12px);position:sticky;top:0;z-index:50}
