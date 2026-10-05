@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="Cabify — Yasir Khan project case study: what it is, how it works, technology stack, workflow and backend role.">
+  <title>Cabify | Yasir Khan Portfolio</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="project.css">
+</head>
+<body class="project-page">
+  <header class="project-topbar">
+    <div class="project-shell project-topbar-inner">
+      <a class="project-back" href="../index.html#work">← Back to My Work</a>
+      <div class="project-top-actions">
+        <a href="../index.html#work">All Projects</a>
+        <a class="primary" href="https://github.com/yasirkhan251/cabify" target="_blank" rel="noreferrer">View GitHub ↗</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="project-shell">
+    <section class="project-hero" data-reveal>
+      <div>
+        <span class="project-kicker">Mobility · Booking prototype</span>
+        <h1>Cabify</h1>
+        <span class="status-badge foundation">● Full-featured Prototype</span>
+        <p class="project-lead">A taxi and ride-management web application with separate user, driver and admin workflows, multiple booking types, vehicle selection and payment-oriented screens.</p>
+        <div class="project-meta"><span>Flask</span><span>MySQL</span><span>SQLite</span><span>Bootstrap</span><span>Passlib</span><span>Ride Booking</span></div>
+      </div>
+      <div class="project-hero-art">
+        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1400&q=80" alt="Cabify project visual">
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">01 · OVERVIEW</span>
+        <h2>What is Cabify?</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card-detail" data-reveal>
+          <h3>What the project does</h3>
+          <p>Cabify models a ride-hailing workflow across three sides of the platform: customers, drivers and administrators. It explores how booking requests move through availability, authorization, ride acceptance and payment-oriented screens.</p>
+        </article>
+        <article class="project-card-detail" data-reveal>
+          <h3>How it benefits the user/business</h3>
+          <ul><li>Separates customer, driver and admin responsibilities.</li><li>Supports current, advance, shared and private booking concepts.</li><li>Provides driver authorization and ride-request workflows.</li><li>Demonstrates a multi-role backend structure for a mobility platform.</li></ul>
+        </article>
+        <article class="project-card-detail full" data-reveal>
+          <h3>Platform & environment</h3>
+          <p>Web application — Flask backend with MySQL in the main implementation and SQLite conversion for local experimentation.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">02 · FEATURES</span>
+        <h2>What is included?</h2>
+      </div>
+      <div class="project-feature-list">
+        <div data-reveal><strong>01 · User registration and login</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>02 · Current and advance booking</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>03 · Shared and private rides</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>04 · Vehicle selection</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>05 · Pickup and drop information</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>06 · Driver registration and authorization</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>07 · Driver ride acceptance/rejection</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>08 · Booking history and status</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>09 · Payment/cash/UPI-oriented screens</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>10 · Admin driver management</strong><span>Implemented as part of the project's current scope.</span></div>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">03 · WORKFLOW</span>
+        <h2>How the project works</h2>
+      </div>
+      <article class="project-card-detail full" data-reveal>
+        <pre class="project-flow">Customer
+  ↓
+Choose Ride Type
+  ↓
+Pickup + Drop
+  ↓
+Vehicle / Driver Options
+  ↓
+Create Booking
+  ↓
+Driver Availability
+  ↓
+Driver Accepts / Rejects
+  ↓
+Ride Journey
+  ↓
+Payment / Cash Flow
+  ↓
+Booking History</pre>
+      </article>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">04 · BACKEND</span>
+        <h2>What role does the backend play?</h2>
+      </div>
+      <article class="project-backend" data-reveal>
+        <p>The backend/application layer is responsible for connecting the interface to the project's data, business logic and user workflows.</p>
+        <ul><li>Session state keeps track of users, drivers and admin roles.</li><li>Booking records separate ride types such as current, advance, share and private flows.</li><li>Driver credentials and authorization are handled through backend records and views.</li><li>Admin pages support driver authorization and operational management.</li><li>The backend is responsible for moving a booking through its lifecycle rather than simply displaying a ride form.</li></ul>
+      </article>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">05 · USAGE</span>
+        <h2>How is it used?</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card-detail full" data-reveal>
+          <p>Users choose a ride type, provide journey information and create a booking. Drivers have a separate workflow for viewing requests and accepting/rejecting rides, while administrators can manage driver authorization.</p>
+          <div class="project-note"><strong>Project maturity:</strong> Full-featured Prototype. The purpose of this page is to explain the implementation that exists in the repository, while keeping production-readiness claims separate.</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">06 · LIMITATIONS</span>
+        <h2>Current boundaries</h2>
+      </div>
+      <article class="project-card-detail full" data-reveal>
+        <p>This is a functional prototype rather than a production ride-hailing platform. Real-time GPS, live navigation, WebSockets, secure payment gateway processing and production identity-document storage would be needed.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="project-shell project-footer">
+    <span>Yasir Khan · Project Case Study</span>
+    <a href="../index.html#work">Back to portfolio ↑</a>
+  </footer>
+
+  <script src="project.js"></script>
+</body>
+</html>
