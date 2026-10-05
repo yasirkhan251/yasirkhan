@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="Hudl Tagging Tools — Yasir Khan project case study: what it is, how it works, technology stack, workflow and backend role.">
+  <title>Hudl Tagging Tools | Yasir Khan Portfolio</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="project.css">
+</head>
+<body class="project-page">
+  <header class="project-topbar">
+    <div class="project-shell project-topbar-inner">
+      <a class="project-back" href="../index.html#work">← Back to My Work</a>
+      <div class="project-top-actions">
+        <a href="../index.html#work">All Projects</a>
+        <a class="primary" href="https://github.com/yasirkhan251/Hudl_Tagging_Tools" target="_blank" rel="noreferrer">View GitHub ↗</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="project-shell">
+    <section class="project-hero" data-reveal>
+      <div>
+        <span class="project-kicker">AI / Computer Vision · Sports automation</span>
+        <h1>Hudl Tagging Tools</h1>
+        <span class="status-badge experimental">● Experimental / Active</span>
+        <p class="project-lead">Experimental sports-video automation tooling for volleyball workflows, combining object detection, OCR, voice input, screen capture and UI automation.</p>
+        <div class="project-meta"><span>Python</span><span>YOLOv8</span><span>EasyOCR</span><span>OpenCV</span><span>MSS</span><span>PyAutoGUI</span><span>Vosk</span><span>Tkinter</span></div>
+      </div>
+      <div class="project-hero-art">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=80" alt="Hudl Tagging Tools project visual">
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">01 · OVERVIEW</span>
+        <h2>What is Hudl Tagging Tools?</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card-detail" data-reveal>
+          <h3>What the project does</h3>
+          <p>Hudl Tagging Tools explores how repetitive volleyball tagging tasks can be assisted by computer vision and automation. The project contains multiple tools rather than one single production pipeline.</p>
+        </article>
+        <article class="project-card-detail" data-reveal>
+          <h3>How it benefits the user/business</h3>
+          <ul><li>Reduces repetitive manual interaction in selected tagging workflows.</li><li>Experiments with object detection and OCR for visual cues.</li><li>Includes offline voice input for manual tag commands.</li><li>Includes calibration and screen-coordinate automation for a specific workstation workflow.</li></ul>
+        </article>
+        <article class="project-card-detail full" data-reveal>
+          <h3>Platform & environment</h3>
+          <p>Python desktop automation / computer-vision tooling running against a captured/visible Hudl workflow.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">02 · FEATURES</span>
+        <h2>What is included?</h2>
+      </div>
+      <div class="project-feature-list">
+        <div data-reveal><strong>01 · YOLOv8-based object detection</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>02 · EasyOCR number recognition</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>03 · Vosk offline voice commands</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>04 · MSS screen capture</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>05 · OpenCV image processing</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>06 · PyAutoGUI interface automation</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>07 · Tkinter interactive tagging tool</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>08 · Target coordinate calibration</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>09 · Attack-location perspective mapping</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>10 · Manual and automated tagging modes</strong><span>Implemented as part of the project's current scope.</span></div>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">03 · WORKFLOW</span>
+        <h2>How the project works</h2>
+      </div>
+      <article class="project-card-detail full" data-reveal>
+        <pre class="project-flow">Hudl Screen / Video
+      ↓
+Screen Capture (MSS)
+      ↓
+Frame Processing (OpenCV)
+      ↓
+Object Detection (YOLOv8)
+      ↓
+Optional OCR (EasyOCR)
+      ↓
+Tag / Player Decision
+      ↓
+PyAutoGUI / UI Automation
+      ↓
+Hudl Tag Entry
+
+Parallel Input:
+Voice → Vosk → Command → Tagging Tool</pre>
+      </article>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">04 · BACKEND</span>
+        <h2>What role does the backend play?</h2>
+      </div>
+      <article class="project-backend" data-reveal>
+        <p>The backend/application layer is responsible for connecting the interface to the project's data, business logic and user workflows.</p>
+        <ul><li>This is primarily a desktop automation project, so it does not have a conventional web backend.</li><li>Its ‘system brain’ is the Python process coordinating detection, OCR, voice commands, timing and UI automation.</li><li>Tkinter provides the operator interface, while OpenCV/MSS/PyAutoGUI connect the model output to the screen workflow.</li></ul>
+      </article>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">05 · USAGE</span>
+        <h2>How is it used?</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card-detail full" data-reveal>
+          <p>The operator launches the tooling on the same machine as the target workflow, calibrates screen coordinates/regions, and uses manual, voice or automated computer-vision-assisted actions.</p>
+          <div class="project-note"><strong>Project maturity:</strong> Experimental / Active. The purpose of this page is to explain the implementation that exists in the repository, while keeping production-readiness claims separate.</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">06 · LIMITATIONS</span>
+        <h2>Current boundaries</h2>
+      </div>
+      <article class="project-card-detail full" data-reveal>
+        <p>The tooling is experimental and workstation-specific. Blur, screen layout changes, OCR errors, compute load and target-coordinate changes can affect reliability. Production-grade tracking and model optimization remain future work.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="project-shell project-footer">
+    <span>Yasir Khan · Project Case Study</span>
+    <a href="../index.html#work">Back to portfolio ↑</a>
+  </footer>
+
+  <script src="project.js"></script>
+</body>
+</html>
