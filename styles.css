@@ -420,3 +420,28 @@ body.modal-open{overflow:hidden}
     padding:7px 9px;
   }
 }
+
+
+/* Premium single CTA for pricing cards */
+.pricing-actions .pricing-connect-button{
+  width:100%;
+  margin:0;
+  min-height:48px;
+  border:0;
+  border-radius:10px;
+  background:linear-gradient(135deg,#4f6bed 0%,#7a5ce6 100%);
+  color:#fff;
+  font-weight:800;
+  letter-spacing:.01em;
+  box-shadow:0 10px 22px rgba(79,107,237,.20);
+  transition:transform .2s ease,box-shadow .2s ease,filter .2s ease;
+}
+.pricing-actions .pricing-connect-button:hover{
+  filter:brightness(1.04);
+  transform:translateY(-2px);
+  box-shadow:0 14px 28px rgba(79,107,237,.28);
+}
+.pricing-actions .pricing-connect-button:focus-visible{
+  outline:3px solid rgba(79,107,237,.28);
+  outline-offset:2px;
+}
