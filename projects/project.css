@@ -64,3 +64,24 @@
   .project-card-detail{padding:22px}
   .project-footer{flex-direction:column;align-items:flex-start}
 }
+
+/* SEO-friendly visible breadcrumbs */
+.project-breadcrumbs{
+  padding-top:18px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color:#98a2b3;
+  font-size:11px;
+  font-weight:700;
+}
+.project-breadcrumbs a{
+  color:#667085;
+  text-decoration:none;
+}
+.project-breadcrumbs a:hover{
+  color:#5577f1;
+}
+.project-breadcrumbs span{
+  color:#98a2b3;
+}
