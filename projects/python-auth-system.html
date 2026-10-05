@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="PythonAuthSystem — Yasir Khan project case study: what it is, how it works, technology stack, workflow and backend role.">
+  <title>PythonAuthSystem | Yasir Khan Portfolio</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="project.css">
+</head>
+<body class="project-page">
+  <header class="project-topbar">
+    <div class="project-shell project-topbar-inner">
+      <a class="project-back" href="../index.html#work">← Back to My Work</a>
+      <div class="project-top-actions">
+        <a href="../index.html#work">All Projects</a>
+        <a class="primary" href="https://github.com/yasirkhan251/PythonAuthSystem" target="_blank" rel="noreferrer">View GitHub ↗</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="project-shell">
+    <section class="project-hero" data-reveal>
+      <div>
+        <span class="project-kicker">Foundation · CLI authentication</span>
+        <h1>PythonAuthSystem</h1>
+        <span class="status-badge foundation">● Learning / Foundation</span>
+        <p class="project-lead">A command-line Python authentication and user-management foundation covering registration, login, verification, admin user operations and email OTP.</p>
+        <div class="project-meta"><span>Python</span><span>JSON</span><span>SMTP</span><span>OTP</span><span>Passlib-style CLI tooling</span><span>pwinput</span></div>
+      </div>
+      <div class="project-hero-art">
+        <img src="https://images.unsplash.com/photo-1633265486064-086b219458ec?auto=format&fit=crop&w=1400&q=80" alt="PythonAuthSystem project visual">
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">01 · OVERVIEW</span>
+        <h2>What is PythonAuthSystem?</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card-detail" data-reveal>
+          <h3>What the project does</h3>
+          <p>PythonAuthSystem is a learning-oriented authentication foundation built without a web framework or database server. It focuses on understanding user registration, login, verification and administrative user management.</p>
+        </article>
+        <article class="project-card-detail" data-reveal>
+          <h3>How it benefits the user/business</h3>
+          <ul><li>Provides a clear introduction to authentication workflow design.</li><li>Separates user and admin operations.</li><li>Demonstrates email OTP verification and password-entry handling.</li><li>Creates a foundation that can later be migrated to a database-backed web application.</li></ul>
+        </article>
+        <article class="project-card-detail full" data-reveal>
+          <h3>Platform & environment</h3>
+          <p>Python command-line application using JSON files for persistence and Gmail SMTP for OTP delivery.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">02 · FEATURES</span>
+        <h2>What is included?</h2>
+      </div>
+      <div class="project-feature-list">
+        <div data-reveal><strong>01 · User registration</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>02 · Login by email or phone</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>03 · Hidden password input</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>04 · Verification workflow</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>05 · Forgot-password flow</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>06 · Email OTP generation</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>07 · Admin user registration</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>08 · Admin verification</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>09 · View/delete/update users</strong><span>Implemented as part of the project's current scope.</span></div><div data-reveal><strong>10 · JSON persistence</strong><span>Implemented as part of the project's current scope.</span></div>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">03 · WORKFLOW</span>
+        <h2>How the project works</h2>
+      </div>
+      <article class="project-card-detail full" data-reveal>
+        <pre class="project-flow">Application Start
+   ↓
+Main Menu
+   ├── User View
+   │     ↓
+   │   Login / Register / Verification
+   │     ↓
+   │   Authenticated User
+   │
+   └── Admin View
+         ↓
+     Manage Users
+         ↓
+ Register / Verify / Update / Delete</pre>
+      </article>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">04 · BACKEND</span>
+        <h2>What role does the backend play?</h2>
+      </div>
+      <article class="project-backend" data-reveal>
+        <p>The backend/application layer is responsible for connecting the interface to the project's data, business logic and user workflows.</p>
+        <ul><li>There is no web backend; the Python application itself acts as the application layer.</li><li>users.json stores user records and OTP.json stores verification data in the learning implementation.</li><li>SMTP is used to send OTP messages.</li><li>The project demonstrates backend concepts at the CLI level before introducing databases, APIs and web frameworks.</li></ul>
+      </article>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">05 · USAGE</span>
+        <h2>How is it used?</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card-detail full" data-reveal>
+          <p>The operator runs the Python program in a terminal, selects User or Admin mode, and follows the corresponding authentication/user-management menus.</p>
+          <div class="project-note"><strong>Project maturity:</strong> Learning / Foundation. The purpose of this page is to explain the implementation that exists in the repository, while keeping production-readiness claims separate.</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="project-section-heading">
+        <span class="project-kicker">06 · LIMITATIONS</span>
+        <h2>Current boundaries</h2>
+      </div>
+      <article class="project-card-detail full" data-reveal>
+        <p>This project is explicitly a learning foundation. Plain JSON persistence and development credentials should not be used for production authentication. A real version should use password hashing, environment secrets, OTP expiry/rate limiting, a database and secure account recovery.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="project-shell project-footer">
+    <span>Yasir Khan · Project Case Study</span>
+    <a href="../index.html#work">Back to portfolio ↑</a>
+  </footer>
+
+  <script src="project.js"></script>
+</body>
+</html>
