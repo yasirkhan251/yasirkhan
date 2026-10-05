@@ -105,3 +105,41 @@ document.getElementById('sendConsultWhatsApp')?.addEventListener('click', () => 
   const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(body)}`;
   window.open(url, '_blank', 'noopener,noreferrer');
 });
+
+
+/* Portfolio project filtering */
+const projectFilters = document.querySelectorAll('.work-filter');
+const projectCards = document.querySelectorAll('.project-showcase .project-card');
+
+function applyProjectFilter(filter) {
+  let visibleCount = 0;
+
+  projectCards.forEach(card => {
+    const shouldShow = filter === 'all' || card.dataset.status === filter;
+    card.classList.toggle('is-hidden', !shouldShow);
+
+    if (shouldShow) {
+      visibleCount += 1;
+      card.classList.remove('project-filter-match');
+      requestAnimationFrame(() => card.classList.add('project-filter-match'));
+    }
+  });
+
+  projectFilters.forEach(button => {
+    const active = button.dataset.projectFilter === filter;
+    button.classList.toggle('active', active);
+    button.setAttribute('aria-selected', String(active));
+  });
+
+  return visibleCount;
+}
+
+projectFilters.forEach(button => {
+  button.addEventListener('click', () => {
+    applyProjectFilter(button.dataset.projectFilter || 'all');
+  });
+});
+
+if (projectFilters.length && projectCards.length) {
+  applyProjectFilter('all');
+}
