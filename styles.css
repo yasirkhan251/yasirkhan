@@ -671,7 +671,8 @@ body.modal-open{overflow:hidden}
 }
 .contribution-cell.level-1{background:#123f24}
 .contribution-cell.level-2{background:#1d783b}
-.contribution-cell.level-3{background:#4ac463}
+.contribution-cell.level-3{background:#34a853}
+.contribution-cell.level-4{background:#4ac463}
 .github-activity-footer{
   display:flex;
   align-items:center;
@@ -691,7 +692,7 @@ body.modal-open{overflow:hidden}
 .github-legend i.level-0{background:#17202c}
 .github-legend i.level-1{background:#123f24}
 .github-legend i.level-2{background:#1d783b}
-.github-legend i.level-3{background:#4ac463}
+.github-legend i.level-3{background:#34a853}.github-legend i.level-4{background:#4ac463}
 @media(max-width:760px){
   .github-activity-card{padding:24px 20px 20px}
   .github-activity-head{align-items:flex-start;flex-direction:column}
